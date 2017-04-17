@@ -1,0 +1,59 @@
+:root {
+    --fontSize: 12px;
+    --fontFamily: "Arial", sans-serif;
+	--colorWhite: #ffffff;
+	--colorBlack: #000000;
+}
+/*--- Объявление медиа запросов. Использование: @media (--small-phone) ---*/
+@custom-media --big-tablet only screen and (max-width: 1024px);
+@custom-media --small-tablet only screen and (max-width: 959px);
+@custom-media --big-phone only screen and (max-width: 767px);
+@custom-media --small-phone only screen and (max-width: 479px);
+pre {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: var(--colorWhite);
+    border: 1px solid var(--colorBlack);
+    border-radius: 5px;
+}
+html {
+    font-family: var(--fontSize);
+    font-size: var(--fontSize);
+    background: var(--colorWhite);
+    color: var(--colorBlack);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    margin: 0;
+    padding: 0;
+}
+.no_script_message {
+    display: block;
+    font-size: 22px;
+    text-align: center;
+    padding: 30px;
+}
+.box {
+    max-width: 1024px;
+    padding: 0 15px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.main {
+    width: 100%;
+    flex-grow: 1;
+    box-sizing: border-box;
+    margin: auto;
+    transition: all 0.2s linear;
+    overflow: hidden;
+}
